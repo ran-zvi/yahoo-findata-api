@@ -3,3 +3,4 @@ numpy
 fastapi
 beautifulsoup4
 uvicorn
+requests
