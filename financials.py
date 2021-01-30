@@ -13,7 +13,7 @@ import re
 def get_financial_data(symbol: str, name: str) -> pd.DataFrame:
     raw_data = BeautifulSoup(_get_html_data(symbol, name))
     data = _extract_data(raw_data)
-    return data.to_dict('list')
+    return data.to_dict()
 
 
 def _get_html_data(symbol: str, name: str) -> str:

@@ -15,4 +15,9 @@ def get_fin_data(symbol: str, type: str):
     f_type = FINANCIAL_DATA_TYPES_MAP.get(type, type)
     if f_type not in FINANCIAL_DATA_TYPES_MAP.values():
         return {'error': f'incorrect data type: {type}'}
-    return get_financial_data(symbol.upper(), type)
+    return get_financial_data(symbol.upper(), f_type)
+
+
+if __name__ == '__main__':
+    data =get_financial_data('gme', 'financials')
+    print('a')
